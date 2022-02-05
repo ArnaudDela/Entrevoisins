@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Entrevoisins</string>
+    <string name="tab_neighbour_title">My neighbours</string>
+    <string name="tab_favorites_title">Favorites</string>
+    <string name="activity_new_neighbour">New neighbour</string>
+    <string name="activity_details_neighbour">Details neighbour</string>
+    <string name="remove_from_favorites">Supprimer des favoris</string>
+    <string name="add_to_favorites">Ajouter aux favoris</string>
+</resources>
