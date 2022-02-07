@@ -48,14 +48,14 @@ public class NeighbourServiceTest {
         assertFalse(service.getNeighbours(false).contains(neighbourToDelete));
     }
 
-    // Pour manipuler la liste des favori il faut utiliser true
+    // Pour manipuler la liste des favoris il faut utiliser true
     @Test
     public void deleteFavoriteNeighbourWithSuccess() {
         // Recuperer un voisin de la liste globale
         Neighbour neighbourToAdd = service.getNeighbours(false).get(0);
-        // Ajouter l'element selectionné dans la liste favori
+        // Ajouter l'element selectionné dans la liste favoris
         service.addNeighbour( neighbourToAdd , true );
-        // Supprimer le voisin de la liste favori
+        // Supprimer le voisin de la liste favoris
         Neighbour neighbourToDelete = service.getNeighbours(true).get(0);
         service.deleteNeighbour(neighbourToDelete, true);
         assertFalse(service.getNeighbours(true).contains(neighbourToDelete));

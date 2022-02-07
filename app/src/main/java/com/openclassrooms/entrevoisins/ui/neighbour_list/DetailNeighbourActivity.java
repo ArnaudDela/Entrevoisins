@@ -67,8 +67,6 @@ public class DetailNeighbourActivity extends Activity {
     private List<Neighbour> mFavoriteNeighboursList;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,9 +80,6 @@ public class DetailNeighbourActivity extends Activity {
         seeDetail();
 
     }
-
-
-
 
 
     private void getNeighbour() {
@@ -104,12 +99,10 @@ public class DetailNeighbourActivity extends Activity {
 
         if (mFavoriteNeighboursList.contains(mNeighbour)) {
             mFav_btn.setImageDrawable(getDrawable(R.drawable.ic_baseline_star__yellow_24));
-        }
-        else
-        {
+        } else {
             mFav_btn.setImageDrawable(getDrawable(R.drawable.ic_baseline_star_24));
         }
-        }
+    }
 
     @OnClick(R.id.fav_btn)
     public void favBtn() {
@@ -119,8 +112,7 @@ public class DetailNeighbourActivity extends Activity {
             mFav_btn.setImageDrawable(getDrawable(R.drawable.ic_baseline_star_24));
             Toast toast = Toast.makeText(this, getString(R.string.remove_from_favorites), Toast.LENGTH_LONG);
             toast.show();
-        }
-        else {
+        } else {
             mApiService.addNeighbour(mNeighbour, true);
             mFav_btn.setImageDrawable(getDrawable(R.drawable.ic_baseline_star__yellow_24));
             Toast toast = Toast.makeText(this, getString(R.string.add_to_favorites), Toast.LENGTH_LONG);

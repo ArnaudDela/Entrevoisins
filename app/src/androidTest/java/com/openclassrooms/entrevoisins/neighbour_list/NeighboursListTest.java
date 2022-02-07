@@ -89,7 +89,7 @@ public class NeighboursListTest {
         // Lancer la vue detail
         onView(ViewMatchers.withId(R.id.list_neighbours)).perform(RecyclerViewActions.actionOnItemAtPosition(1, click()));
 
-       // verifier que le textview n'est pas vide est egale au nom du voisin de la position &
+       // verifier que le textview n'est pas vide est egale au nom du voisin de la position 1
         onView(ViewMatchers.withId(R.id.activity_detail_neighbour_first_name)).check(matches(withText(neighbour.getName())));
     }
 
@@ -98,7 +98,7 @@ public class NeighboursListTest {
      */
     @Test
     public void onlyMyFavorite() {
--
+
         // s'assurer que la liste est vide
         onView(ViewMatchers.withId(R.id.favorite_list_neighbours)).check(withItemCount(0));
 

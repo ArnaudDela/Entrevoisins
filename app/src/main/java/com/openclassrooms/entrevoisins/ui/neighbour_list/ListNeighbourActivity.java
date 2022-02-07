@@ -39,6 +39,7 @@ public class ListNeighbourActivity extends AppCompatActivity {
 
     }
 
+
     @OnClick(R.id.add_neighbour)
     void addNeighbour() {
         AddNeighbourActivity.navigate(this);
